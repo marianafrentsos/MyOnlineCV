@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
-require("dotenv").config();
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
