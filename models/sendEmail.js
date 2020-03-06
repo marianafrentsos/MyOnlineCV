@@ -41,6 +41,7 @@ const checkEmailFormat = () => {
 };
 
 const url = "https://heroku.com/mycvproject.com/email";
+// const url = "http://localhost:3001/email";
 
 const data = {
   email: "",
@@ -56,6 +57,7 @@ const sendEmail = async () => {
       headers: {
         "Content-Type": "application/json;charset=utf-8"
       },
+      mode: "no-cors",
       body: JSON.stringify(data)
     });
     console.log(response);
