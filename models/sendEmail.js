@@ -40,7 +40,7 @@ const checkEmailFormat = () => {
   checkIfEmpty();
 };
 
-const url = "http://localhost:3001/email";
+const url = "https://git.heroku.com/mycvproject.com/email";
 
 const data = {
   email: "",
