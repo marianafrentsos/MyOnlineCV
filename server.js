@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -14,7 +13,6 @@ app.use(
     extended: false
   })
 );
-app.use(cors());
 app.use(express.json());
 app.post("/email", (req, res, err) => {
   const { email, name, subject, text } = req.body;
