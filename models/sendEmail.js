@@ -36,8 +36,9 @@ const checkEmailFormat = () => {
     emptyFields.innerText =
       "Please check your email adress format! It must look something like: yourname@example.com";
     displayAlert(emptyFields);
+  } else {
+    checkIfEmpty((emptyFields.innerText = "Please complete all fields"));
   }
-  checkIfEmpty();
 };
 const url = "https://mycvproject.herokuapp.com/email";
 // const url = "http://localhost:3001/email";
@@ -85,9 +86,7 @@ const getMessageValues = data => {
 getMessageValues(data);
 submitBtn.addEventListener("click", () => {
   event.preventDefault();
-  sendEmail();
-
-  if (!checkIfEmpty() && !checkEmailFormat()) {
+  if (!checkEmailFormat()) {
     sendEmail();
   }
 });
