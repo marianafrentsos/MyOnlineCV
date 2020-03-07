@@ -3,6 +3,8 @@ const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const sgMail = require("@sendgrid/mail");
+require("dotenv").config();
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.use(express.static("assets"));
@@ -24,7 +26,6 @@ app.post("/email", (req, res) => {
     text: text
   };
   console.log("data:", req.body);
-
   sgMail
     .send(msg)
     .then(() => res.json({ message: "email sent" }))

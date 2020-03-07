@@ -37,6 +37,7 @@ const checkEmailFormat = () => {
       "Please check your email adress format! It must look something like: yourname@example.com";
     displayAlert(emptyFields);
   }
+  checkIfEmpty();
 };
 const url = "https://mycvproject.herokuapp.com/email";
 // const url = "http://localhost:3001/email";
@@ -53,8 +54,10 @@ const sendEmail = async () => {
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "* "
       },
+
       body: JSON.stringify(data)
     });
     console.log(response);
@@ -82,6 +85,8 @@ const getMessageValues = data => {
 getMessageValues(data);
 submitBtn.addEventListener("click", () => {
   event.preventDefault();
+  sendEmail();
+
   if (!checkIfEmpty() && !checkEmailFormat()) {
     sendEmail();
   }
