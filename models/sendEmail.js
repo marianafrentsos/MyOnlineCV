@@ -35,12 +35,10 @@ const checkEmailFormat = () => {
   if (email.value !== "" && !checkIfEmpty() && !format.test(email.value)) {
     emptyFields.innerText =
       "Please check your email adress format! It must look something like: yourname@example.com";
-    return displayAlert(emptyFields);
+    displayAlert(emptyFields);
   }
-  checkIfEmpty();
 };
-
-const url = "https://heroku.com/mycvproject.com/email";
+const url = "https://mycvproject.herokuapp.com/email";
 // const url = "http://localhost:3001/email";
 
 const data = {
@@ -55,9 +53,8 @@ const sendEmail = async () => {
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json;charset=utf-8"
+        "Content-Type": "application/json"
       },
-      mode: "no-cors",
       body: JSON.stringify(data)
     });
     console.log(response);

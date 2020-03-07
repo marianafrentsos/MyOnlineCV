@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -13,10 +12,10 @@ app.use(
     extended: false
   })
 );
-app.use(cors());
 app.use(express.json());
 app.post("/email", (req, res) => {
   const { email, name, subject, text } = req.body;
+
   const msg = {
     to: process.env.MYEMAIL,
     from: email,
