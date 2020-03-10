@@ -40,8 +40,8 @@ const checkEmailFormat = () => {
     checkIfEmpty((emptyFields.innerText = "Please complete all fields"));
   }
 };
-// const url = "https://mycvproject.herokuapp.com/email";
-const url = "http://localhost:3001/email";
+const url = "https://mycvproject.herokuapp.com/email";
+// const url = "http://localhost:3001/email";
 
 const data = {
   email: "",
