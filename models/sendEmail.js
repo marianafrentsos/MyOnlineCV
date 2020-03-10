@@ -40,10 +40,10 @@ const checkEmailFormat = () => {
     checkIfEmpty((emptyFields.innerText = "Please complete all fields"));
   }
 };
-const url = "https://mycvproject.herokuapp.com/email";
-// const url = "http://localhost:3001/email";
+// const url = "https://mycvproject.herokuapp.com/email";
+const url = "http://localhost:3001/email";
 
-const data = {
+let data = {
   email: "",
   subject: "",
   name: "",
@@ -65,6 +65,12 @@ const sendEmail = async () => {
     if (response.status === 200) {
       displayAlert(succesAlert);
       clearFields(inputItems);
+      data = {
+        email: "",
+        subject: "",
+        name: "",
+        text: ""
+      };
       console.log("email sent");
     }
   } catch (error) {
@@ -83,10 +89,10 @@ const getMessageValues = data => {
     });
   });
 };
-getMessageValues(data);
 submitBtn.addEventListener("click", () => {
   event.preventDefault();
-  if (!checkEmailFormat()) {
+  if (!checkEmailFormat() && !checkIfEmpty()) {
+    getMessageValues(data);
     sendEmail();
   }
 });

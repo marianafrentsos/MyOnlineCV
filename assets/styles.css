@@ -467,23 +467,23 @@ h1 {
 /* alert */
 .succesMessage {
   width: 400px;
-  background-color: #60ced6;
+  background-color: #00838f;
   position: absolute;
-  top: 520%;
+  top: 550%;
   left: calc(50% - 200px);
   transition: all 1s linear;
   display: none;
   opacity: 0;
   transition: all 0.5s ease-in-out 0.2s;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.75);
+  color: white;
   z-index: 3000;
 }
 
 .errorMessage {
   width: 300px;
   height: 100px;
-  background-color: hsl(0, 59%, 61%);
+  background-color: #ef9a9a;
   position: absolute;
   top: 520%;
   left: calc(50% - 150px);
@@ -496,18 +496,19 @@ h1 {
 }
 
 .emptyFields {
-  width: 350px;
-  height: 100px;
-  background-color: #60ced6;
+  width: 400px;
+  height: 80px;
+  background-color: #00838f;
   position: absolute;
-  top: 525%;
-  left: calc(50% - 50px);
+  top: 530%;
+  left: 38%;
   transition: all 1s linear;
   display: none;
   opacity: 0;
   transition: all 0.5s ease-in-out 0.2s;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.75);
+  color: white;
+  z-index: 3000;
 }
 
 .fadeOut {
