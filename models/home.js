@@ -40,6 +40,7 @@ navLink.forEach(link => {
     let currentLink = document.getElementsByClassName("current");
     currentLink[0].classList.remove("current");
     link.classList.add("current");
+    fadeClose();
   });
 });
 
@@ -97,4 +98,38 @@ accordionItems.forEach(element => {
       displayContent.style.maxHeight = displayContent.scrollHeight + "px";
     }
   });
+});
+
+//Make progress bar
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 1806 && window.scrollY < 1870) {
+    progressBarCss = document.querySelector(".myProgressCss");
+    progressBarJs = document.querySelector(".myProgressJs");
+    progressBarHtml = document.querySelector(".myProgressHtml");
+    progressBarReact = document.querySelector(".myProgressReact");
+    progressBarBootstrap = document.querySelector(".myProgressBootstrap");
+    progressBarNode = document.querySelector(".myProgressNode");
+
+    const fillProgressBar = (progressBar, progress) => {
+      let width = 1;
+      let myInterval = setInterval(frame, 40);
+      function frame() {
+        if (width >= progress) {
+          clearInterval(myInterval);
+        } else {
+          width++;
+          progressBar.style.width = width + "%";
+          progressBar.innerText = width + "%";
+        }
+      }
+    };
+
+    fillProgressBar(progressBarCss, 50);
+    fillProgressBar(progressBarJs, 40);
+    fillProgressBar(progressBarHtml, 70);
+    fillProgressBar(progressBarReact, 30);
+    fillProgressBar(progressBarBootstrap, 40);
+    fillProgressBar(progressBarNode, 10);
+  }
 });
