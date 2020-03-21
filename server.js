@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const sgMail = require("@sendgrid/mail");
+
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
@@ -11,6 +12,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.use(express.static("assets"));
 app.use(express.static("models"));
+
 app.use(
   express.urlencoded({
     extended: false

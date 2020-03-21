@@ -2,7 +2,6 @@ let bMenu = document.querySelector(".Bmenu");
 let navLink = document.querySelectorAll(".nav-link");
 let navItem = document.querySelectorAll(".nav-item");
 let burgerMenu = document.querySelector(".navbar-toggler");
-let allSections = document.querySelectorAll("body section");
 
 //parallax for the landing page
 function parallax(element, distance, speed) {
@@ -103,7 +102,7 @@ accordionItems.forEach(element => {
 //Make progress bar
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 1806 && window.scrollY < 1870) {
+  if (window.scrollY <= 1806 && window.scrollY < 1808) {
     progressBarCss = document.querySelector(".myProgressCss");
     progressBarJs = document.querySelector(".myProgressJs");
     progressBarHtml = document.querySelector(".myProgressHtml");

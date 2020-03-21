@@ -16,8 +16,10 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "helmet": "^3.21.3",
     "node": "^13.10.1",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "x-frame-options": "^1.0.0"
   },
   "engines": {
     "node": ">= 6.9.4",
