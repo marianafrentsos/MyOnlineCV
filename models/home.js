@@ -82,7 +82,6 @@ underLayer.addEventListener("click", () => {
 
 //individual projects accordion
 const accordionItems = document.querySelectorAll(".indivProject");
-const accordionBody = document.querySelectorAll(".collapsible");
 
 accordionItems.forEach(element => {
   let displayContent = element.nextElementSibling;

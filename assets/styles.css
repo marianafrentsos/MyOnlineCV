@@ -376,6 +376,7 @@ h1 {
 /* Project Page */
 .projects {
   height: 120vh;
+  z-index: 101;
 }
 
 .myMedia i:hover {
@@ -387,6 +388,9 @@ h1 {
   height: 40px;
 }
 
+.accordion > .card {
+  z-index: 1200;
+}
 .indivProject {
   display: flex;
   justify-content: space-between;
@@ -432,20 +436,19 @@ h1 {
   overflow: hidden;
   z-index: 1200;
 }
-.contactMe {
-  height: 100vh;
-}
+
 /* Footer Page */
 .footer {
-  position: relative;
+  position: fixed;
+  width: 100%;
   bottom: 0;
-  height: 100px;
-  z-index: 1002;
+  height: 80px;
   color: grey;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #3e4551;
+  z-index: 9999;
 }
 
 .footer p {
@@ -750,6 +753,7 @@ h1 {
   width: 60%;
   margin: 0 auto;
 }
+
 .skillsText {
   width: 5%;
   font-size: 18px;
