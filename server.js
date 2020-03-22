@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
+const cors = require("cors");
 const sgMail = require("@sendgrid/mail");
 
 if (process.env.NODE_ENV !== "production") {
@@ -9,7 +10,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
+app.use(cors());
 app.use(express.static("assets"));
 app.use(express.static("models"));
 
@@ -29,7 +30,6 @@ app.post("/email", (req, res) => {
     subject: subject,
     text: text
   };
-  console.log("data:", req.body);
   sgMail
     .send(msg)
     .then(() => res.json({ message: "email sent" }))

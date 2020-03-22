@@ -423,16 +423,16 @@ h1 {
 
 .active:after {
   content: "\00AB";
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   transform: rotate(90deg);
 }
 .open {
-  background: #212121 !important;
+  background: #212121;
 }
 .collapsible {
   overflow: hidden;
   max-height: 0;
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
   overflow: hidden;
   z-index: 1200;
 }
@@ -460,15 +460,15 @@ h1 {
   width: 400px;
   background-color: #00838f;
   position: absolute;
-  top: 550%;
+  top: 540%;
   left: calc(50% - 200px);
   transition: all 1s linear;
   display: none;
   opacity: 0;
-  transition: all 0.5s ease-in-out 0.2s;
+  transition: all 0.9s ease-in-out 0.4s;
   font-weight: 600;
   color: white;
-  z-index: 3000;
+  z-index: 100;
 }
 
 .errorMessage {
@@ -486,7 +486,8 @@ h1 {
   color: rgba(0, 0, 0, 0.75);
 }
 
-.emptyFields {
+.emptyFields,
+.emailFormat {
   width: 400px;
   height: 80px;
   background-color: #00838f;
@@ -497,11 +498,26 @@ h1 {
   display: none;
   opacity: 0;
   transition: all 0.5s ease-in-out 0.2s;
-  font-weight: 600;
   color: white;
   z-index: 3000;
 }
 
+.emailFormat {
+  height: 150px;
+}
+.emailFormat h5 {
+  padding: 1.2em;
+}
+
+.emailFormat span {
+  color: black;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 2;
+}
+.emptyFields h5 {
+  padding: 1em;
+}
 .fadeOut {
   opacity: 1;
   display: block;
@@ -746,9 +762,51 @@ h1 {
   }
 }
 
-.collapsible img {
-  width: 60%;
-  margin: 0 auto;
+.viewElevator {
+  background-image: url("elevator.png");
+}
+
+.viewTeam {
+  background-image: url("myImdb.png");
+}
+
+.viewMover {
+  background-image: url("mover.png");
+}
+.viewRgb {
+  background-image: url("rgbGame.png");
+}
+
+.imgContainer {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.viewRgb,
+.viewMover,
+.viewElevator {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.viewTeam {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}
+.viewRgb:hover,
+.viewMover:hover,
+.viewTeam:hover,
+.viewElevator:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.card-cascade {
+  overflow: hidden;
 }
 
 .skillsText {
