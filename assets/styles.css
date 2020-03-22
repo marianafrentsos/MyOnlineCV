@@ -32,7 +32,7 @@ html {
   background: url("mountain.png") no-repeat 50% 50%;
   background-size: cover;
   margin: auto;
-  z-index: 100;
+  z-index: 3000;
 }
 
 .landing:before {
@@ -357,7 +357,7 @@ h1 {
 
 /* Contact Page */
 .contactMe {
-  height: 100vh;
+  height: 110vh;
 }
 .myForm {
   border-radius: 30px;
@@ -423,7 +423,7 @@ h1 {
 
 .active:after {
   content: "\00AB";
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: rotate(90deg);
 }
 .open {
@@ -448,7 +448,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   background-color: #3e4551;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .footer p {
@@ -535,12 +535,9 @@ h1 {
   body {
     overflow-x: hidden;
   }
-  .navbar {
-    position: sticky !important;
-    top: 0;
-  }
+
   .landing {
-    width: 120%;
+    width: 100%;
     overflow-x: hidden;
   }
 
