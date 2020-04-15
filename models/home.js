@@ -21,20 +21,20 @@ const parallaxDown = (element, distance, speed) => {
   item.style.transform = `translateY(${(distance / 5) * speed}px)`;
 };
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   parallax("#layer1", window.scrollY, 0.3);
   parallax("#layer2", window.scrollY, 0.8);
-  parallaxDown(".one", window.scrollY, 0.9);
   parallaxY(".four", window.scrollY, 1.8);
   parallaxY(".two", window.scrollY, 0.6);
   parallaxY(".six", window.scrollY, 0.2);
   parallaxY(".seven", window.scrollY, 0.8);
+  parallaxDown(".one", window.scrollY, 0.9);
   parallaxDown(".eight", window.scrollY, 0.6);
   parallaxDown(".three", window.scrollY, 0.6);
   parallaxDown(".five", window.scrollY, 0.8);
 });
 
-navLink.forEach(link => {
+navLink.forEach((link) => {
   link.addEventListener("click", () => {
     let currentLink = document.getElementsByClassName("current");
     currentLink[0].classList.remove("current");
@@ -83,7 +83,7 @@ underLayer.addEventListener("click", () => {
 //individual projects accordion
 const accordionItems = document.querySelectorAll(".indivProject");
 
-accordionItems.forEach(element => {
+accordionItems.forEach((element) => {
   let displayContent = element.nextElementSibling;
   element.addEventListener("click", () => {
     displayContent.classList.toggle("hide");

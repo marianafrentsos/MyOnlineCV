@@ -389,7 +389,7 @@ h1 {
 }
 
 .accordion > .card {
-  z-index: 1200;
+  z-index: 900;
 }
 .indivProject {
   display: flex;

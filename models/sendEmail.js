@@ -45,8 +45,8 @@ const checkIfEmpty = () => {
   return check;
 };
 
-// const url = "https://mycvproject.herokuapp.com/email";
-const url = "http://localhost:3000/email";
+const url = "https://mycvproject.herokuapp.com/email";
+// const url = "http://localhost:3000/email";
 
 let data = {
   email: "",
